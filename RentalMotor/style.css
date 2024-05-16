@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    margin-bottom: 50px;
+}
+
+.container {
+    width: 60%;
+    background-color: rgb(194, 194, 194);
+    box-shadow : 0px 10px 20px 0px rgba(0, 0, 0, 0.09);
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container tr {
+    margin-top: 20px;
+}
+
+.container input {
+    margin-left: 10px;
+    box-shadow : 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+.container td input {
+    padding: 10px 30px;
+    text-align: left;
+    border: none;
+    border-radius: 5px;
+}
+
+#pengguna {
+    margin-bottom: 10px;
+}
+
+select {
+    margin-top: 20px;
+    margin-left: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    box-shadow : 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+option {
+    background-color: rgb(44, 41, 41);
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 0;
+}
+
+select:hover {
+    background-color: #d5cccc;
+}
+
+p {
+    display: inline;
+}
+
+table th {
+    font-weight: 400;
+    text-align: left;
+}
+
+button {
+    padding: 10px 30px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgb(77, 77, 255);
+    transition: all .2s ease-in-out;
+    color: white;
+    box-shadow : 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: rgb(41, 41, 255);
+}
