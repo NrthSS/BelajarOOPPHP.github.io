@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+:root {
+  --wildsand: #f5f5f5;
+  --mercury: #e6e6e6;
+  --alto: #e6e6e6;
+  --silver: #c4c4c4;
+  --nobel: #b5b5b5;
+
+  --calmshel: #d4bdb0;
+  --thatch: #8a7670;
+  --thatch2: #554844;
+  --wafer: #e0d0c7;
+
+  --text: #575757;
+}
+
+body {
+  background-color: var(--mercury);
+}
+
+.container-page-one {
+  width: 80%;
+  margin: 30px auto;
+  padding: 10px;
+  display: grid;
+  justify-content: center;
+  row-gap: 20px;
+}
+
+.container-page-one h1 {
+  font-weight: 500;
+  text-align: center;
+  margin: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.container-page-one h1:hover {
+  letter-spacing: 2px;
+}
+
+.input-data {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+
+.input-data input {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--calmshel);
+  border: 1px solid rgba(178, 178, 178, 0.756);
+  color: #f5f5f5;
+  font-weight: 500;
+}
+
+::placeholder {
+  color: #0e0e0e;
+}
+
+.input-data input:focus {
+  border: none;
+  outline: none;
+  background-color: #13ffb0;
+}
+
+.input-data label {
+  font-size: 14px;
+  padding: 5px 0;
+}
+
+.c-1 {
+  display: flex;
+  flex-direction: column;
+  margin: 0 20px;
+  text-align: left;
+}
+
+/* BAGIAN BUTTON  */
+
+.but {
+  background-color: rgb(90, 90, 255);
+  text-align: center;
+  color: var(--silver);
+  padding: 10px 20px;
+}
+
+.container-button-p1,
+.but {
+  margin: 10px 0;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+/* ICON */
+.fa-solid {
+  line-height: 10px;
+  margin-right: 10px;
+}
+
+/* BUTTON STYLE */
+
+.container-button-p1 .on1 {
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.08);
+}
+
+.container-button-p1 .on2 {
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.08);
+}
+
+.container-button-p1 .on3 {
+  border-right: 2px solid rgb(228, 0, 0);
+  border-radius: 0;
+  background-color: transparent;
+  color: rgba(37, 35, 35, 0.74);
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.08);
+}
+
+/* BUTTON HOVER */
+.container-button-p1 .but:hover,
+.fa-solid:hover {
+  color: white;
+}
+
+.container-button-p1 .on1:hover {
+  background-color: rgb(57, 57, 234);
+  transform: translateY(-3px);
+}
+
+.container-button-p1 .on2:hover {
+  background-color: rgb(57, 57, 234);
+  transform: translateY(-3px);
+}
+
+.container-button-p1 .on3:hover {
+  background-color: rgb(223, 0, 0);
+  color: black;
+  border-radius: 8px;
+}
+
+/* TABLE STYLE */
+
+.table {
+  width: 100%;
+  padding: 20px;
+  border: none;
+  background-color: #13ffb0;
+  border-radius: 5px;
+  color: #f5f5f5;
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+tr {
+  background-color: #c0ff14;
+  border-radius: 5px;
+  color: black;
+}
+
+.row {
+  background-color: rgb(70, 61, 61);
+  border: 1px solid gray;
+  color: white;
+  border-radius: 5px;
+}

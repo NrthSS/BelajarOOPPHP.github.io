@@ -2,13 +2,15 @@
 
 include "proses.php";
 
-if (isset($_POST['rental'])) {
-
 $cetak = new pros();
 $cetak->setHarga(100000, 20000, 80000, 90000);
-$cetak->setHarga();
+
+if (isset($_POST['rental'])) {
+
 $cetak->jenis = $_POST['jenis'];
-$cetak->nama = $_POST['nama'];
+$cetak->pengguna = $_POST['pengguna'];
+$cetak->waktu = $_POST['waktu'];
+$cetak->setMember();
 $cetak->hargaRental();
 
 $cetak->cetak();
@@ -43,7 +45,7 @@ $cetak->cetak();
                 </tr>
                 <tr>
                     <th>
-                        <label for="">Lama Waktu Rental(Perhari) </label>
+                        <label for="waktu">Lama Waktu Rental(Perhari) </label>
                     </th>
                     <td>
                     <p> : </p><input type="number" name="waktu" id="waktu" placeholder="Isi Oleh angka">
@@ -51,7 +53,7 @@ $cetak->cetak();
                 </tr>
                 <tr>
                     <th>
-                        <label for="">Jenis Motor</label>
+                        <label for="jenis">Jenis Motor</label>
                     </th>
                     <td>
                         <p> : </p>

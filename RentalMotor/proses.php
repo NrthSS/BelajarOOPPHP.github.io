@@ -1,10 +1,7 @@
 <?php 
 
 class Rental {
-    public  $pengguna,
-            $diskon,
-            $harga,
-            $waktu;
+    public  $diskon;
     private $sportBike,
             $touringBike,
             $dirtBike,
@@ -21,7 +18,7 @@ class Rental {
     {
         $this->sportBike = $jenis1 ;
         $this->touringBike = $jenis2 ;
-        $this->dirtBike = $jenis4 ;
+        $this->dirtBike = $jenis3 ;
         $this->caferacer = $jenis4 ;
     }
 
@@ -33,24 +30,37 @@ class Rental {
         $data["caferacer"] = $this->caferacer;
         return $data;
     }
+
+    public function setMember()
+    {
+        in_array($this->$pengguna, $this->listmember);
+            if ($this->pengguna === $this->listmember) {
+                $this->diskon = 0.05;
+                echo "Dia sebagai member mendapat diskon";
+            }else {
+                $this->diskon = 0;
+                echo "Hanya Pengguna Tidak Mendapat Diskon";
+            }
+            return $this->diskon;
+    }
 }
 
 class pros extends Rental {
     public function hargaRental()
     {
         $dataHarga = $this->getHarga();
-        $hargaRental = dataHarga * $this->waktu;
-        $hargaPPN = $hargaRental * $this->ppn;
+        $hargaRental = $dataHarga[$this->jenis] * $this->waktu;
+        $hargaPPN = $hargaRental * $this->ppn - $this->setMember();
         $hargaAkhir = $hargaRental + $hargaPPN;
+        return $hargaAkhir;
     }
 
     public function cetak() 
     {
         echo "<center>";
-        echo "<p>". $this->nama ."</p>" . $this->getMember();
-        echo "Jenis Motor Yang disewa" . $this->jenis;
-        echo "Harga rental perhari" . $this->setHarga();
-        echo "besar biaya yang harus dibayar" . number_format($this->hargaAkhir(), 0, '', '.');
+        echo "Dia " .  $this->pengguna  . "Sebagai" . $this->setMember() . "<br>";
+        echo "Jenis Motor Yang disewa " . $this->jenis . "<br>";
+        echo "besar biaya yang harus dibayar" . $this->hargaRental();
         echo "</center>";
     }
 }

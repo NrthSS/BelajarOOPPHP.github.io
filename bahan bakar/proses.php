@@ -49,7 +49,7 @@ class Shell {
             echo "<p>" . "Anda membeli bahan bakar minyak tipe " . $this->jenis . "</p> " . "<br>";
             echo "<p>" ."Dengan Jumlah " . $this->jumlah . " Liter" . "</p>" . "<br>";
             echo "<p>" . "Total yang harus anda bayar Rp . " . number_format($this->hargaBeli(), 0, '', '.') . "</p>" ."<br>";
-            echo "<p>" . "---------------------------------" . "<p>"  . "<br>";
+            echo "<p>" . "------------------👍------------------" . "<p>"  . "<br>";
             echo "</center>";
         }
     }
